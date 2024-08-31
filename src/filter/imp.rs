@@ -212,7 +212,7 @@ impl ObjectImpl for WhisperFilter {
         .mutable_paused()
         .mutable_playing()
         .build(),
-      glib::ParamSpecInt::builder("min-voice-activity-ms")
+      glib::ParamSpecUInt64::builder("min-voice-activity-ms")
         .nick("Minimum voice activity")
         .blurb(&format!("The minimum duration of voice that must be detected for the model to run, in milliseconds. Defaults to {}ms.", DEFAULT_MIN_VOICE_ACTIVITY_MS))
         .mutable_ready()
